@@ -1,0 +1,11 @@
+{
+  "name": "U8x8Menu",
+  "keywords": "menu",
+  "description": "Displays a menu",
+  "frameworks": "arduino",
+  "platforms":
+  [
+    "atmelavr",
+    "espressif8266"
+  ]
+}
