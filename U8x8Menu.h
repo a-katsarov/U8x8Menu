@@ -9,7 +9,7 @@
 class U8x8Menu {
 public:
     U8x8Menu(U8X8_SSD1306_128X64_NONAME_HW_I2C *lcd, int lcd_rows, int lcd_cols, char * heading = "");
-    void addItem(char * label, char * value, void (* cb)());
+    void addItem(char * label, char * value, void (* cb)(int index));
     void show();
     void next();
     void prev();

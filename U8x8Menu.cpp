@@ -12,7 +12,7 @@ U8x8Menu::U8x8Menu(U8X8_SSD1306_128X64_NONAME_HW_I2C *lcd, int lcd_rows, int lcd
     _heading = heading;
 };
 
-void U8x8Menu::addItem( char * label, char * value, void (* cb)() ) {
+void U8x8Menu::addItem( char * label, char * value, void (* cb)(int index) ) {
     U8x8MenuItem item(_cols);
     item.setLabel(label);
     item.setDisplayValue(value);
@@ -95,7 +95,7 @@ void U8x8Menu::prev() {
 }
 
 void U8x8Menu::fire () {
-    menuItems[_selectedMenuItem].fire();
+    menuItems[_selectedMenuItem].fire(_selectedMenuItem);
 }
 
 void U8x8Menu::reset (int item = 0) {

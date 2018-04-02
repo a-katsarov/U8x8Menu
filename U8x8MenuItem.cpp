@@ -21,12 +21,12 @@ char * U8x8MenuItem::sprintItem () {
     return buf;
 }
 
-void U8x8MenuItem::assingAction (void (* cb)()) {
+void U8x8MenuItem::assingAction (void (* cb)(int index)) {
     _cb = cb;
 };
 
-void U8x8MenuItem::fire () {
-    _cb();
+void U8x8MenuItem::fire (int index) {
+    _cb(index);
 };
 
 char * str = (char *) malloc(17);
